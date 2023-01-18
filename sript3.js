@@ -22,3 +22,22 @@ function additem(e) {
     }
   }
 }
+
+function filterItems(e)
+{
+    var text=e.target.value.tolowerCase();
+    var items=itemlist.getElementsByTagName('li');
+    Array.form(items).array.forEach(function(item)){
+        var itemName=item.firstChild.textContent;
+        if(itemName.tolowerCase().indexof(text)!=-1)
+        {
+            item.style.display='block';
+        }
+        else{
+            item.style.display=none;
+        }
+    }
+        
+};
+
+
